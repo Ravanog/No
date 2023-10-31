@@ -30,7 +30,7 @@ import random
 from helper.txt import mr
 from helper.database import db
 from config import START_PIC, FLOOD, ADMIN 
-
+import os, sys
 
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client, message):
@@ -59,6 +59,12 @@ async def log_file(client, message):
         await message.reply_document('TelegramBot.log')
     except Exception as e:
         await message.reply_text(f"Error:\n`{e}`")
+
+#Restart to cancell all process 
+@Client.on_message(filters.command('logs') & filters.user(ADMIN))
+async def restart_bot(b, m):
+    await m.reply_text("🔄__Rᴇꜱᴛᴀʀᴛɪɴɢ.....__")
+    os.execl(sys.executable, sys.executable, *sys.argv)
 
 @Client.on_message(filters.private & (filters.document | filters.audio | filters.video))
 async def rename_start(client, message):
