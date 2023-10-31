@@ -21,8 +21,8 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
         progress = "{0}{1}".format(
-            ''.join(["█" for i in range(math.floor(percentage / 5))]),
-            ''.join(["░" for i in range(20 - math.floor(percentage / 5))]))
+            ''.join(["⬢" for i in range(math.floor(percentage / 5))]),
+            ''.join(["⬡" for i in range(20 - math.floor(percentage / 5))]))
             
         tmp = progress + mr.PROGRESS_BAR.format( 
             round(percentage, 2),
@@ -36,7 +36,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
             await message.edit(
                 text="{}\n\n{}".format(ud_type, tmp),               
                 reply_markup=InlineKeyboardMarkup( [[
-                    InlineKeyboardButton("✖️ 𝙲𝙰𝙽𝙲𝙴𝙻 ✖️", callback_data="cancel")
+                    InlineKeyboardButton("❗️ᴄᴀɴᴄᴇʟ ᴛʜɪꜱ ꜰᴜɴᴄᴛɪᴏɴ❗️", callback_data="cancel")
                     ]]
                 )
             )
