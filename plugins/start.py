@@ -61,7 +61,7 @@ async def log_file(client, message):
         await message.reply_text(f"Error:\n`{e}`")
 
 #Restart to cancell all process 
-@Client.on_message(filters.command('logs') & filters.user(ADMIN))
+@Client.on_message(filters.command('restart') & filters.user(ADMIN))
 async def restart_bot(b, m):
     await m.reply_text("🔄__Rᴇꜱᴛᴀʀᴛɪɴɢ.....__")
     os.execl(sys.executable, sys.executable, *sys.argv)
