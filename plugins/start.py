@@ -41,8 +41,8 @@ async def start(client, message):
     button=InlineKeyboardMarkup([[
         InlineKeyboardButton("• ᴅᴇᴠꜱ •", callback_data='dev')
         ],[
-        InlineKeyboardButton('ᴜᴩᴅᴀᴛᴇꜱ', url='https://t.me/CrazyXBoTs'),
-        InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ', url='https://t.me/CrazyXBoTsBot')
+        InlineKeyboardButton('ᴜᴩᴅᴀᴛᴇꜱ', url='https://t.me/TG_BOTS_UPDATE'),
+        InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ', url='https://t.me/KUSHALHK')
         ],[
         InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('ʜᴇʟᴩ', callback_data='help')
@@ -96,8 +96,8 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton("• ᴅᴇᴠꜱ •", callback_data='dev')                
                 ],[
-                InlineKeyboardButton('ᴜᴩᴅᴀᴛᴇꜱ', url='https://t.me/CrazyXBoTs'),
-                InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ', url='https://t.me/CrazyXBoTsBot')
+                InlineKeyboardButton('ᴜᴩᴅᴀᴛᴇꜱ', url='https://t.me/TG_BOTS_UPDATE'),
+                InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ', url='https://t.me/KUSHALHK')
                 ],[
                 InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('ʜᴇʟᴩ', callback_data='help')
